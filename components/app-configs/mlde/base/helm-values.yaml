@@ -89,14 +89,17 @@ openshiftRoute:
 # the same namespace in which Determined is being installed.
 # tlsSecret:
 
-# security:
+security:
   # defaultTask sets the user and group that tasks will run as. For convenience, the default Determined
   # environments contain an unprivileged user named det-nobody, which does have a writable HOME
   # directory. The det-nobody user is a suitable default user when using the default Determined
   # environment images and when running containers as root is not desired.
-  # defaultTask:
+  defaultTask:
   #   user: det-nobody
   #   uid: 65533
+  # FIX: openshift high uid
+    uid: {}
+    gid: {}
   #   group: det-nobody
   #   gid: 65533
   # authz option (EE-only) sets the authorization mode.

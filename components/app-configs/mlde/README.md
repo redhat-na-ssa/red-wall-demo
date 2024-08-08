@@ -17,3 +17,11 @@ helm show values mlde/determined > scratch/values.yaml
 
 helm upgrade --namespace mlde -i determined mlde/determined --values components/app-configs/mlde/base/helm-values.yaml
 ```
+
+## Raw Notes
+
+There needs to be a way to remove any `runAs[User|Group]` the following from pod definitions. `securityContext` should look like below or be undefined.
+
+```sh
+securityContext: {}
+```
