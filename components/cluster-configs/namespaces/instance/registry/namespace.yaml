@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: registry
+  annotations:
+    openshift.io/description: |
+      A container registry
+    openshift.io/display-name: Registry

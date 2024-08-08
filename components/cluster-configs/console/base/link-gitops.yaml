@@ -1,0 +1,11 @@
+apiVersion: console.openshift.io/v1
+kind: ConsoleLink
+metadata:
+  name: github-gitops
+spec:
+  href: 'https://github.com/redhat-na-ssa/demo-amd-config'
+  location: ApplicationMenu
+  text: GitHub - Lab Cluster Config
+  applicationMenu:
+    section: Git Repos
+    imageURL: /static/assets/github.svg
