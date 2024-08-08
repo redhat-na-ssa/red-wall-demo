@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   # - ../../components/operators/local-storage/operator/overlays/stable
   - ../../components/operators/lvms-operator/operator/overlays/stable-4.14
+  - ../../components/operators/lvms-operator/instance/overlays/lvm-on-workers
