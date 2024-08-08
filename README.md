@@ -31,4 +31,17 @@ Add users to htpasswd
 ocp_setup_user < username > < password - optional>
 ```
 
+Annotate default storage class
+
+```yaml
+  annotations:
+    storageclass.kubernetes.io/is-default-class: 'true'
+```
+
+Label worker nodes with lvm for storage use
+
+```sh
+oc label nodes -l 'node-role.kubernetes.io/worker=' 'node-role.kubernetes.io/lvm='
+```
+
 ## Links
