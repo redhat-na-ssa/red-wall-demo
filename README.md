@@ -44,4 +44,15 @@ Label worker nodes with lvm for storage use
 oc label nodes -l 'node-role.kubernetes.io/worker=' 'node-role.kubernetes.io/lvm='
 ```
 
+Add determined-ai
+
+```sh
+# https://docs.determined.ai/latest/setup-cluster/k8s/install-on-kubernetes.html
+# helm repo add determined-ai https://helm.determined.ai/
+helm repo add mlde https://helm.determined.ai/
+helm show values mlde/determined > scratch/values.yaml
+
+helm upgrade -i determined mlde/determined --values components/app-configs/mlde/base/helm-values.yaml
+```
+
 ## Links
