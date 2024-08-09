@@ -270,6 +270,27 @@ taskContainerDefaults:
   # https://docs:determined.ai/latest/topic-guides/custom-pod-specs.html for more details.
   # cpuPodSpec:
   # gpuPodSpec:
+  cpuPodSpec:
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      labels:
+        customLabel: custom-pod
+    spec:
+      containers:
+        # # Custom init container.
+        # - name: determined-init-container
+        #   volumeMounts:
+        #     - name: empty-dir
+        #       mountPath: /scratch
+        # Will be applied to the container executing the task.
+        - name: determined-container
+          volumeMounts:
+            - name: empty-dir
+              mountPath: /scratch
+      volumes:
+        - name: empty-dir
+          emptyDir: {}
 
   # Configure a custom CheckpointGC pod spec for experiments. When a custom CheckpointGC pod spec
   # is defined, it takes precedence over the default experiment pod specifications. See

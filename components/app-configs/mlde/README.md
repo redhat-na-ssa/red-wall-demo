@@ -22,22 +22,17 @@ helm upgrade --namespace mlde -i determined mlde/determined --values components/
 
 ## Raw Notes
 
-There needs to be a way to remove any `runAs[User|Group]` the following from pod definitions. `securityContext` should look like below or be undefined.
+There needs to be a way to remove any `runAs[User|Group]` from pod definitions. `securityContext` should look like below or be undefined on `job` or `pod` definitions
 
 ```sh
 securityContext: {}
 ```
 
+Template Test (does not work)
+
 ```yaml
-bind_mounts: null
-debug: false
-description: JupyterLab (gratefully-adapted-koi)
-entrypoint: null
+# see https://docs.determined.ai/latest/setup-cluster/k8s/custom-pod-specs.html
 environment:
-  add_capabilities: null
-  drop_capabilities: null
-  environment_variables: {}
-  force_pull_image: false
   image:
     cpu: determinedai/pytorch-ngc:0.35.0
     cuda: determinedai/pytorch-ngc:0.35.0
