@@ -97,9 +97,11 @@ security:
   defaultTask:
   #   user: det-nobody
   #   uid: 65533
-  # FIX: openshift high uid
-    uid: {}
-    gid: {}
+  # NOTE: There needs to be a way to UNSET these values, INSTEAD of defaulting to root:0
+    uid: null
+    gid: null
+    user: default
+    group: root
   #   group: det-nobody
   #   gid: 65533
   # authz option (EE-only) sets the authorization mode.
