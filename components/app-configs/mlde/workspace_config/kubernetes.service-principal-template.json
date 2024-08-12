@@ -1,0 +1,8 @@
+{
+    "name": "<SP-Name>",
+    "application_id": "<ID of the Application(client), see entra app>",
+    "directory_id": "<ID of the directory/tenant, see entra app>",
+    "client_secret_id": "<client's secret id, required but not used>",
+    "client_secret_value": "<the actual secret value>",
+    "expires": "<expiry, required but not used>"
+}
