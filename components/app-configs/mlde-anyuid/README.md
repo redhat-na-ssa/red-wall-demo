@@ -34,8 +34,8 @@ Template Test (does not work)
 # see https://docs.determined.ai/latest/setup-cluster/k8s/custom-pod-specs.html
 environment:
   image:
-    cpu: determinedai/pytorch-ngc:0.35.0
-    cuda: determinedai/pytorch-ngc:0.35.0
+    cpu: docker.io/determinedai/pytorch-ngc:0.35.0
+    cuda: docker.io/determinedai/pytorch-ngc:0.35.0
   pod_spec:
     apiVersion: v1
     kind: Pod
