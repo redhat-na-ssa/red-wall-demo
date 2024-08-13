@@ -1,0 +1,16 @@
+environment:
+  environment_variables: {}
+  image: nolanc/pyspark-nb:spark3.5-rapids1.12-azure3.4-autosparksession0.0.2
+  pod_spec:
+    spec:
+      serviceAccountName: mlde-worker
+      containers:
+      - name: determined-container
+        volumeMounts:
+        - name: service-principal
+          readOnly: true
+          mountPath: /azure/service_principals/
+      volumes:
+      - name: service-principal
+        secret:
+          secretName: azure-service-principal

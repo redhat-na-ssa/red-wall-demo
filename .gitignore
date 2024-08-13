@@ -21,3 +21,6 @@ tmp
 .venv
 env/
 venv/
+
+# Specifically Service Principal files used for secrets
+kubernetes.service-principal.json
