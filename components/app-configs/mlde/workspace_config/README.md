@@ -17,7 +17,7 @@ In order to respect both product's methods for forcing non-root containers, the 
 1. Assuming you are running from this directory
 2. Copy and modify the service-principal-template to match the Service Principal being used for the Workspace.
 
-```
+```sh
 cp kubernetes.service-principal-template.json kubernetes.service-principal.json
 ```
 

@@ -5,8 +5,8 @@ namespace: <replace me>
 
 resources:
 - namespace.yaml
+- scc-non-root.yaml
 - worker-service-account.yaml
-- scc-kludge.yaml
 
 secretGenerator:
 - name: azure-service-principal
