@@ -40,9 +40,10 @@ environment:
     apiVersion: v1
     kind: Pod
     spec:
-      containers:
+      initContainers:
         - name: determined-init-container
           securityContext: {}
+      containers:
         - name: determined-container
           securityContext: {}
 ```
