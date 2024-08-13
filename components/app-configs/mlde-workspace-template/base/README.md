@@ -26,7 +26,7 @@ cp kubernetes.service-principal-template.json kubernetes.service-principal.json
 4. Run kustomize by using
 
 ```
-kubectl apply -k .
+oc apply -k .
 ```
 
 5. In the MLDE workspace, create a new template, using the contents of `mlde-task-template.yaml`
