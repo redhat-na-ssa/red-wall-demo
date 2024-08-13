@@ -4,5 +4,5 @@ kind: Namespace
 metadata:
   name: replace-me
   annotations:
-    openshift.io/display-name: "Determined.ai Project"
+    openshift.io/display-name: "Determined.ai - Example Project"
     argocd.argoproj.io/sync-wave: "0"
