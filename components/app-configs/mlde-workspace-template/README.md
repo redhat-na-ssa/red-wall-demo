@@ -25,8 +25,8 @@ cp kubernetes.service-principal-template.json kubernetes.service-principal.json
     * Note: In MLDE, we generally advise keeping 1 namespace to 1 workspace
 4. Run kustomize by using
 
-```
-oc apply -k .
+```sh
+oc apply -k overlays/example
 ```
 
 5. In the MLDE workspace, create a new template, using the contents of `mlde-task-template.yaml`
