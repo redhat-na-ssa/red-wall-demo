@@ -2,7 +2,7 @@
 # Determined OSS edition uses the determinedai repository in DockerHub.
 imageRegistry: determinedai
 # HPE Machine Learning Development Environment (MLDE), Determined Enterprise Edition, uses the HPE MSC as the image registry
-#imageRegistry: hub.myenterpriselicense.hpe.com/hpe-mlde/<SKU>
+# imageRegistry: hub.myenterpriselicense.hpe.com/hpe-mlde/<SKU>
 # ATTENTION
 # Please also set:
 #   - communicated product SKU,
@@ -57,7 +57,7 @@ masterPort: 8080
 #
 # WARNING
 # The first installation must run with the createNonNamespacedObjects flag set to true to ensure
-# the non-namespaced objects are created. 
+# the non-namespaced objects are created.
 # When deploying multiple namespaces within the same shared cluster, this should be set to false
 # with helm overrides.
 createNonNamespacedObjects: true
@@ -394,7 +394,7 @@ resourcePools:
 #       - pool_name: additional_pool
 
 # Configure the retention policy for trial logs.
-#retentionPolicy:
+# retentionPolicy:
   # Specifies the number of days to retain logs for by default.
   # logRetentionDays: 7
   # Schedule for cleaning up logs. This also accepts a cron expression. For example to run retention every Sunday at 2 am, use "0 2 * * 0"

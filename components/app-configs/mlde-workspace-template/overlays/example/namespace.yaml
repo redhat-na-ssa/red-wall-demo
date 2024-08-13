@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: workspace-replace-me
+  name: project-example
   annotations:
-    openshift.io/display-name: "Determined.ai"
+    openshift.io/display-name: "Determined.ai - Example Project"
     argocd.argoproj.io/sync-wave: "0"
