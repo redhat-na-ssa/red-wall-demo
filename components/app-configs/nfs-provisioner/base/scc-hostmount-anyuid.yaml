@@ -21,12 +21,9 @@ metadata:
       used by the persistent volume recycler. WARNING: this SCC allows host file
       system access as any UID, including UID 0.  Grant with caution.
   name: nfs-provisioner-hostmount-anyuid
-readOnlyRootFilesystem: true
+readOnlyRootFilesystem: false
 requiredDropCapabilities:
-# - KILL
 - MKNOD
-# - SETUID
-# - SETGID
 runAsUser:
   type: RunAsAny
 seLinuxContext:
