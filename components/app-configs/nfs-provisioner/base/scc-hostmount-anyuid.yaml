@@ -21,7 +21,7 @@ metadata:
       used by the persistent volume recycler. WARNING: this SCC allows host file
       system access as any UID, including UID 0.  Grant with caution.
   name: nfs-provisioner-hostmount-anyuid
-readOnlyRootFilesystem: false
+readOnlyRootFilesystem: true
 requiredDropCapabilities:
 - MKNOD
 runAsUser:
@@ -30,8 +30,7 @@ seLinuxContext:
   type: MustRunAs
 supplementalGroups:
   type: RunAsAny
-users:
-- system:serviceaccount:openshift-infra:pv-recycler-controller
+users: []
 volumes:
 - configMap
 - csi
