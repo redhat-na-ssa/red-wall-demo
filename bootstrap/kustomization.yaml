@@ -5,4 +5,5 @@ resources:
   - 00-cluster-config
   - 00-install-operators
   # - 01-app-configs
+  - nfs-provisioner
   - web-terminal

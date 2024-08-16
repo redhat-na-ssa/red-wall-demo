@@ -6,7 +6,7 @@ namespace: nfs-provisioner
 resources:
 - https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/deploy
 - namespace.yaml
-# - scc-houstmount-anyuid.yaml
+# - scc-hostmount-anyuid.yaml
 - scc-rolebinding.yaml
 
 patches:
